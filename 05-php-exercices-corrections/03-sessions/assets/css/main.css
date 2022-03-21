@@ -1,0 +1,57 @@
+/*
+  Grid: https://www.imarketinx.de/artikel/responsive-image-gallery-with-css-grid.html
+  Grid+Flex: https://www.imarketinx.de/artikel/text-centered-on-image.html
+  Image resize: https://www.delftstack.com/fr/howto/css/resize-image-css/
+*/
+
+/* First the Grid */
+.gallery-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+  grid-gap: 1.5rem;
+  justify-items: center;
+  margin: 0;
+  padding: 0;
+}
+
+/* The Picture Frame */
+.gallery-frame {
+  padding: 0.5rem;
+  font-size: 1.2rem;
+  text-align: center;
+  background-color: rgb(165, 152, 152);
+  color: #d9d9d9;
+}
+
+/* The Images */
+
+img {
+  height: 100%;
+  width: 100%;
+  object-fit: contain;
+}
+
+.gallery-img {
+  /* max-width: 100%;
+  height: auto;
+  object-fit: cover;
+  transition: opacity 0.25s ease-in-out; */
+  height: 300px;
+  width: 300px;
+}
+
+/* Formulaire */
+
+legend {
+  background-color: #000;
+  color: #fff;
+  padding: 3px 6px;
+}
+
+.output {
+  font: 1rem "Fira Sans", sans-serif;
+}
+
+input {
+  margin: 0.4rem;
+}

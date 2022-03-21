@@ -1,0 +1,41 @@
+table,
+th,
+td {
+  border: 1px solid;
+}
+
+table {
+  width: 100%;
+}
+
+ul {
+  list-style-type: none;
+  margin: 0;
+  padding: 0;
+  background-color: #283645;
+  overflow: hidden;
+}
+li {
+  float: left;
+}
+li a {
+  color: white;
+  padding: 20px;
+  text-decoration: none;
+  display: block;
+}
+
+li a:hover {
+  background-color: #1490d7;
+}
+
+h1 {
+  color: #1490d7;
+}
+
+.gauche {
+  float: left;
+}
+.clearB {
+  clear: both;
+}

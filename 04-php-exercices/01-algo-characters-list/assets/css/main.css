@@ -1,0 +1,10 @@
+@font-face {
+  font-family: "Ringbearer";
+  src: url("../fonts/RingbearerMedium-51mgZ.ttf");
+}
+
+body {
+  margin: 0;
+  padding: 0;
+  height: 100vh;
+}

@@ -1,0 +1,93 @@
+# MYSQL : Pokémons DB
+
+## Créer la base de données
+
+// Créer la base de donnée _db_introprog_pokemons_
+
+CREATE DATABASE db_introprog_pokemons;
+
+## Créer les tables
+
+// Créer la table avec les types de Pokémons, _pk_types_
+
+```mysql
+CREATE TABLE `db_introprog_pokemons`.`pk_types` ( `Id` INT NOT NULL AUTO_INCREMENT , `Type` VARCHAR(30) NOT NULL , PRIMARY KEY (`Id`)) ENGINE = InnoDB;
+```
+
+INSERT INTO `pk_types` (`Id`, `Type`) VALUES (NULL, 'Acier');
+
+```mysql
+INSERT INTO `pk_types` (`Id`, `Type`) VALUES (NULL, 'Acier'), (NULL, 'Combat'), (NULL, 'Dragon'), (NULL, 'Eau'), (NULL, 'Electrik'), (NULL, 'Fée'), (NULL, 'Feu'), (NULL, 'Glace'), (NULL, 'Insecte'), (NULL, 'Normal'), (NULL, 'Plante'), (NULL, 'Poison'), (NULL, 'Psy'), (NULL, 'Roche'), (NULL, 'Sol'), (NULL, 'Spectre'), (NULL, 'Ténèbres'), (NULL, 'Vol');
+```
+
+// Créer la table des Pokémons, _pk_list_
+
+```mysql
+CREATE TABLE `db_introprog_pokemons`.`pk_list` ( `Id` INT NOT NULL AUTO_INCREMENT , `Name` VARCHAR(30) NOT NULL , `Pv` INT NOT NULL , `Image` VARCHAR(30) NOT NULL , `Type1` INT NOT NULL , `Type2` INT NULL , `Editable` BOOLEAN NOT NULL , PRIMARY KEY (`Id`), INDEX `Type` (`Type1`, `Type2`)) ENGINE = InnoDB;
+```
+
+// Lier le champ type de la table `db_introprog_pokemons` au champ type de la table `pk_types`
+
+```mysql
+ALTER TABLE `pk_list` ADD FOREIGN KEY (`Type1`) REFERENCES `pk_types`(`Id`), ADD FOREIGN KEY (`Type2`) REFERENCES `pk_types`(`Id`) ON DELETE RESTRICT ON UPDATE RESTRICT;
+```
+
+// Insérér un Pokémon
+
+```mysql
+INSERT INTO `pk_list` (`Id`, `Name`, `Pv`, `Image`, `Type1`, `Type2`, `Editable`) VALUES (NULL, 'Pikachu', '35', 'Pikachu.jpg', '5', NULL, '0');
+```
+
+// Update d'un Pokémon, par exemple le nom de l'image de Pikachu
+
+```mysql
+UPDATE `pk_list` SET `Image` = 'Pikachu.jpg' WHERE `pk_list`.`Id` = 3;
+```
+
+// Effacer un Pokémon (par exemple sur le nom)
+
+```mysql
+DELETE FROM `pk_list`
+WHERE Name = 'Pikachu'
+```
+
+// Effacer tous les Pokémons
+
+```mysql
+DELETE FROM `pk_list`;
+```
+
+// Résinsérer tous les pokémons
+
+```mysql
+INSERT INTO `pk_list` (`Id`, `Name`, `Pv`, `Image`, `Type1`, `Type2`, `Editable`) VALUES
+(NULL, 'Bulbizarre', '45', 'Bulbizarre.jpg', '11', '12', '0'),
+(NULL, 'Herbizarre', '60', 'Herbizarre.jpg', '11', '12', '0'),
+(NULL, 'Florizarre', '80', 'Florizarre.jpg', '11', '12', '0'),
+(NULL, 'Salamèche', '39', 'Salamèche.jpg', '7', NULL, '0'),
+(NULL, 'Reptincel', '58', 'Reptincel.jpg', '7', NULL, '0'),
+(NULL, 'Dracaufeu', '78', 'Dracaufeu.jpg', '7', '18', '0'),
+(NULL, 'Carapuce', '44', 'Carapuce.jpg', '4', NULL, '0'),
+(NULL, 'Carabaffe', '59', 'Carabaffe.jpg', '4', NULL, '0'),
+(NULL, 'Tortank', '79', 'Tortank.jpg', '4', NULL, '0'),
+(NULL, 'Chenipan', '45', 'Chenipan.jpg', '9', NULL, '0'),
+(NULL, 'Chrysacier', '50', 'Chrysacier.jpg', '9', NULL, '0'),
+(NULL, 'Papilusion', '90', 'Papilusion.jpg', '9', '18', '0'),
+(NULL, 'Aspicot', '40', 'Aspicot.jpg', '9', '12', '0'),
+(NULL, 'Coconfort', '45', 'Coconfort.jpg', '9', '12', '0'),
+(NULL, 'Dardargnan', '65', 'Dardargnan.jpg', '9', '12', '0'),
+(NULL, 'Roucool', '40', 'Roucool.jpg', '10', '18', '0'),
+(NULL, 'Roucoups', '63', 'Roucoups.jpg', '10', '18', '0'),
+(NULL, 'Roucarnage', '83', 'Roucarnage.jpg', '10', '18', '0'),
+(NULL, 'Rattata', '30', 'Rattata.jpg', '10', NULL, '0'),
+(NULL, 'Rattatac', '55', 'Rattatac.jpg', '10', NULL, '0'),
+(NULL, 'Piafabec', '40', 'Piafabec.jpg', '10', '18', '0'),
+(NULL, 'Rapasdepic', '63', 'Rapasdepic.jpg', '10', '18', '0'),
+(NULL, 'Abo', '35', 'Abo.jpg', '12', NULL, '0'),
+(NULL, 'Arbok', '60', 'Arbok.jpg', '12', NULL, '0'),
+(NULL, 'Pikachu', '35', 'Pikachu.jpg', '5', NULL, '1');
+```
+
+## Pokedex
+
+https://eternia.fr/fr/pokedex/liste-pokemon/

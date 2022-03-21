@@ -1,0 +1,118 @@
+@font-face {
+  font-family: "Ringbearer";
+  src: url("../fonts/RingbearerMedium-51mgZ.ttf");
+}
+
+body {
+  background-color: #522e03;
+  margin: 0;
+  padding: 0;
+  height: 100vh;
+}
+
+h1 {
+  padding-top: 10px;
+  font-family: "Ringbearer", serif;
+  color: #c5a659;
+  text-shadow: 2px 2px 6px rgb(42, 42, 15);
+  text-align: center;
+  font-size: 3em;
+}
+
+h2 {
+  margin: 0;
+  font-size: 1.1em;
+  text-shadow: 2px 2px 6px #000;
+  text-align: center;
+}
+
+h3 {
+  padding: 2px 0px;
+  margin: 2px 0px;
+  font-size: 0.9em;
+  text-shadow: 2px 2px 6px #000;
+  text-align: center;
+}
+
+.quote {
+  background-color: rgba(68, 65, 65, 0.404);
+  text-shadow: 2px 2px 6px rgb(42, 42, 15);
+  margin-top: 25px;
+  font-style: italic;
+  border-left: 1px dashed rgb(32, 32, 32);
+  padding: 0.3em;
+  border-radius: 2%;
+}
+
+/*
+  Grid: https://www.imarketinx.de/artikel/responsive-image-gallery-with-css-grid.html
+  Grid+Flex: https://www.imarketinx.de/artikel/text-centered-on-image.html
+  Image resize: https://www.delftstack.com/fr/howto/css/resize-image-css/
+  Flex: https://developer.mozilla.org/fr/docs/Web/CSS/minmax()
+*/
+
+/* Main grid with all cards */
+.gallery-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fill, minmax(300px, 1fr));
+  grid-gap: 2rem;
+  margin: 0 10px;
+  padding: 0 25px;
+  justify-items: center;
+}
+
+/* Card */
+.gallery-frame {
+  padding: 0.5rem;
+  font-size: 1.2rem;
+  text-align: center;
+  color: #f1eded;
+  border-radius: 5%;
+  text-align: center;
+}
+
+/* Images */
+
+/*
+  https://www.freecodecamp.org/news/how-to-center-an-image-in-css/
+*/
+
+.gallery-img {
+  display: block;
+  width: 300px;
+  height: 300px;
+  margin: auto;
+}
+
+img {
+  height: 100%;
+  width: 100%;
+  padding-top: 10px;
+  object-fit: cover;
+  border-radius: 50%;
+}
+
+/* Backgrounds */
+.bkgr-green {
+  background-color: rgba(70, 148, 70, 0.787);
+}
+
+.bkgr-blue {
+  background-color: rgba(87, 115, 236, 0.89);
+}
+
+.bkgr-brown {
+  background-color: rgba(206, 153, 22, 0.835);
+}
+
+.bkgr-red {
+  background-color: rgba(139, 0, 0, 0.822);
+}
+
+.bkgr-grey {
+  background-color: rgba(148, 144, 144, 0.856);
+}
+
+.bkgr-default {
+  background-color: rgba(235, 232, 232, 0.322);
+}

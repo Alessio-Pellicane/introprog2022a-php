@@ -1,0 +1,27 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Formulaires: POST</title>
+</head>
+
+<body>
+  <h1>Formulaires: POST</h1>
+  <form action="07-forms-external-file.php" method="POST">
+    <fieldset>
+      <legend>Infos</legend>
+      <label for="nom">Votre nom:</label>
+      <input type="text" name="nom" required>
+      <label for="age">Votre âge:</label>
+      <input type="number" name="age">
+      <label for="commentaire">Commentaire:</label>
+      <input type="textarea" name="commentaire" required>
+      <input type="submit" value="Soumettre" required>
+    </fieldset>
+  </form>
+</body>
+
+</html>

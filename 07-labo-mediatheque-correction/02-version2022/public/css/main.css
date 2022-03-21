@@ -1,0 +1,93 @@
+@import url("https://fonts.googleapis.com/css?family=Roboto");
+body {
+  font-family: "Roboto", sans-serif;
+  color: #3d3d3d;
+  margin: 0;
+}
+div#main {
+  width: 700px;
+  margin: 50px auto 20px auto;
+  /*border: 1px solid red;*/
+}
+div.film {
+  /*border: 1px solid green;*/
+  margin-bottom: 20px;
+  padding: 20px;
+}
+
+div.film.bleu {
+  box-shadow: 2px 4px 5px #5e8eb3;
+}
+div.film.rouge {
+  box-shadow: 2px 4px 5px #faa18d;
+}
+div.annee {
+  text-align: right;
+  display: inline-block;
+  width: 5%;
+}
+h2.titre {
+  display: inline-block;
+  width: 90%;
+}
+div.image {
+  /*border: 1px solid pink;*/
+  width: 25%;
+  display: inline-block;
+  vertical-align: top;
+}
+div.contenu {
+  /*border: 1px solid blue;*/
+  width: 70%;
+  display: inline-block;
+  vertical-align: top;
+  font-size: 12px;
+}
+div.image img {
+  width: 120px;
+  margin-top: 15px;
+}
+div.contenu label {
+  font-weight: bold;
+}
+div.resume {
+  color: #686868;
+  margin-top: 10px;
+}
+div.paging {
+  display: inline-block;
+  width: 50%;
+  text-align: center;
+  margin-bottom: 20px;
+}
+a.next,
+a.previous {
+  display: inline-block;
+  width: 25%;
+}
+a.next {
+  text-align: right;
+}
+/****** RECHERCHER ******/
+header {
+  /*background-color: #0061A7;*/
+  padding: 20px;
+  box-shadow: 0px 3px 5px #848484;
+  background: no-repeat 15% 60% / 310px #14497d url("../icons/film-strip.jpg");
+}
+input[type="image"] {
+  width: 16px;
+  vertical-align: bottom;
+  position: relative;
+  left: -27px;
+  margin-bottom: 5px;
+}
+form {
+  width: 200px;
+  margin: 20px auto;
+}
+input.search {
+  width: 170px;
+  height: 20px;
+  border-radius: 5px;
+}

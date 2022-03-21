@@ -1,0 +1,222 @@
+/* Type de police et couleur */
+@import url("https://fonts.googleapis.com/css?family=Roboto");
+body {
+  font-family: "Roboto", sans-serif;
+  color: #3d3d3d;
+}
+
+.general{
+  overflow: auto;
+}
+div#main {
+  width: 700px;
+  margin: 100px auto 260px auto;
+}
+div.film {
+  margin-bottom: 20px;
+  padding: 20px;
+}
+div.film.bleu:nth-child(odd){
+  box-shadow: 2px 4px 5px #5e8eb3;
+}
+div.film.bleu:nth-child(even) {
+  box-shadow: 2px 4px 5px #faa18d;
+}
+div.annee {
+  text-align: right;
+  display: inline-block;
+  width: 5%;
+}
+h2.titre {
+  display: inline-block;
+  width: 90%;
+}
+div.image {
+  width: 25%;
+  display: inline-block;
+  vertical-align: top;
+}
+div.contenu {
+  width: 70%;
+  display: inline-block;
+  vertical-align: top;
+  font-size: 12px;
+}
+div.image img {
+  width: 120px;
+  margin-top: 15px;
+}
+div.contenu label {
+  font-weight: bold;
+}
+div.resume {
+  color: #686868;
+  margin-top: 10px;
+}
+div.paging {
+  display: inline-block;
+  width: 50%;
+  text-align: center;
+  margin-bottom: 20px;
+}
+a.next,
+a.previous {
+  display: inline-block;
+  width: 25%;
+}
+a.next {
+  text-align: right;
+}
+.navigation {
+  display: flex;
+  justify-content: center;
+  z-index: 5;
+  position: fixed;
+  top: 90%; left:35%; right: 35%;
+}
+
+.page-link:link, .page-link:visited {
+	color: rgb(248, 244, 244);
+  background-color: #1b1610;
+}
+.page-link:hover{
+	color: rgb(248, 244, 244);
+  background-color: #1b1610;
+}
+.page-link:active{
+	color: rgb(248, 244, 244);
+  background-color: #1b1610;
+}
+.page-link{
+  color: rgb(246, 246, 250);
+  background-color: #f6f7ef;
+}
+.pagination{
+  background-color: #faa18d;
+  z-index: 5;
+}
+.navigation2{
+  display: flex;
+  justify-content: center;
+  margin-bottom: 80px;
+  position: fixed;
+  z-index: 5;
+ 
+}
+.recherche{
+  display: flex;
+  position: fixed;
+  bottom: 95.5%; left: 35%; right: 35%;
+  justify-content: center;
+  z-index: 4;
+}
+.champ{
+  margin: 0;
+  float: center;  
+}
+.fondEcran{
+  z-index: 4;
+  max-width: 100%;
+  position: fixed;
+  height: 100%;
+  min-width: 100%;
+
+}
+.taille {
+  max-width: 250px;
+  height: 50%;
+  text-align: center;
+  margin: auto;
+  height: 80%;
+ 
+} 
+
+.bouton {
+  width: 20%;
+  padding: 0px;
+  margin:0;
+  border-top-left-radius: none;
+  border-bottom-left-radius: none;
+  background: white;
+  border: none;
+
+ } 
+ 
+ .cadre{
+  border: none;
+  height: 30px;
+}
+ .img{
+  max-width: 25px;
+  max-height: 25px;
+} 
+.border-dark{
+  border-top-right-radius: 5px;
+  border-bottom-right-radius: 5px;
+}
+.page-item.active .page-link {
+  background-color: darkred;
+  border-color: darkred;
+}
+.colourt {
+  background-color: transparent;
+  color:gray;
+}
+@media screen and (max-width: 1100px) {
+
+div.film.bleu {
+  box-shadow: 2px 4px 5px #5e8eb3;
+  max-width: 500px;
+  
+}
+div.contenu h2{
+  font-size: 1.5rem;
+}
+div.contenu {
+  font-size: 0.68rem;
+  padding-left: 5%;
+}
+div.contenu h3 {
+  font-size: 1.5rem;
+}
+}
+@media screen and (max-width: 800px) {
+
+div.film.bleu {
+  box-shadow: 2px 4px 5px #5e8eb3;
+  max-width: 400px;
+}
+div.contenu h2{
+  font-size: 1rem;
+}
+div.contenu {
+  font-size: 0.58rem;
+  padding-left: 15%;
+}
+div.contenu h3 {
+  font-size: 1rem;
+}
+div.recherche input{
+  max-width: 150px;
+}
+}
+@media screen and (max-width: 600px) {
+
+  div.film.bleu {
+    box-shadow: 2px 4px 5px #5e8eb3;
+    max-width: 270px;
+  }
+  div.contenu h2{
+    font-size: 0.8rem;
+  }
+  div.contenu {
+    font-size: 0.58rem;
+    padding-left: 35%;
+  }
+  div.contenu h3 {
+    font-size: 0.8rem;
+  }
+  div.recherche input{
+    max-width: 100px;
+  }
+  }

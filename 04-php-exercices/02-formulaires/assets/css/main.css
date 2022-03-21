@@ -1,0 +1,18 @@
+h1 {
+  text-align: center;
+}
+
+img {
+  height: 100%;
+  width: 100%;
+  padding-top: 10px;
+  object-fit: cover;
+  border-radius: 50%;
+}
+
+.container-img {
+  display: block;
+  width: 300px;
+  height: 300px;
+  margin: auto;
+}
